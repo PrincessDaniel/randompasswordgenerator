@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div id="container">
+            <h1 id="heading-one">Generate a <br><span id="heading-two">random password</span></h1>
+            <p>Never use an insecure password again</p>
+            <label for="password-length" id="password-label">Password Length:</label>
+            <input type="number" id="password-length" min="4" max="30" value="15" class="copy-btn">
+            <div id="button-container">
+                <button id="generate-password" onclick="passwordDisplay()">Generate Password</button>
+                <label id="toggle"><input type="checkbox" id="toggle-symbols" checked> Include Symbols & Numbers</label>
+            </div>
+            <hr id="line-break">
+            <div id="password-container">
+                <div class="password-box">
+                    <p class="passwords" id="password-one"></p>
+                    <button class="copy-btn" onclick="copyToClipboard('password-one')"><ion-icon name="copy-outline"></ion-icon></button>
+                </div>
+                <div class="password-box">
+                    <p class="passwords" id="password-two"></p>
+                    <button class="copy-btn" onclick="copyToClipboard('password-two')"><ion-icon name="copy-outline"></ion-icon></button>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
